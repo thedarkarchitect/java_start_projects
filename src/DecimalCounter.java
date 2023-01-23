@@ -1,28 +1,23 @@
 public class DecimalCounter {
     public static void main(String[] args){
-//        System.out.println(areEqualByThreeDecimalPlaces(-3.1756, -3.175));
-        System.out.println(change(-3.1756));
-        System.out.println(-3175.000000/ Math.pow(10, 3));
-//        System.out.println(change(3.175));
+        System.out.println(areEqualByThreeDecimalPlaces(-3.1756, -3.175));
+        System.out.println(areEqualByThreeDecimalPlaces(3.175, 3.176));
+        System.out.println(areEqualByThreeDecimalPlaces(3.0, 3.0));
+        System.out.println(areEqualByThreeDecimalPlaces(-3.123, 3.123));
+
 
     }
 
     public static boolean areEqualByThreeDecimalPlaces(double firstNum, double secondNum){
-        boolean answer = false;
-        if ( change(firstNum) == change(secondNum)){
-            answer = true;
+        // the logic is to move the first 3 decimals to the left by multiplying by 1000 then turning it into a an int to remove the decimal points and compare the first 4 numbers
+        firstNum = (int) (firstNum * 1000);
+        secondNum = (int) (secondNum * 1000);
+
+        if (firstNum == secondNum){
+            return true;
         }else{
-            answer = false;
+            return false;
         }
-        return answer;
     }
 
-    public static double change(double num){
-
-        num = num * Math.pow(10, 3); //pow(base, exponent)
-        num = Math.floor(num);
-        num = num/ Math.pow(10, 3);
-
-        return Math.abs(num);
-    }
 }
