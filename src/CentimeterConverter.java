@@ -1,7 +1,7 @@
 public class CentimeterConverter {
     public static void main(String[] args){
-        System.out.println(convertToCentimeters(5, 8));
-        System.out.println(convertToCentimeters(12));
+        System.out.println("5ft, 8 inches "+ convertToCentimeters(5, 8)+ " cm");
+        System.out.println("12 inches "+ convertToCentimeters(+ 12)+ " cm");
     }
 
     public static double convertToCentimeters(int height){
