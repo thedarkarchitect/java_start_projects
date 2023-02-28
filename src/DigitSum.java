@@ -8,6 +8,7 @@ public class DigitSum {
     }
 
     public static int sumDigits(int number){
+        //this is a function that adds a each digit in a numer of more than 1 digit
         int sum  = 0;
         if (number < 0){
             return -1;
