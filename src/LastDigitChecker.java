@@ -6,7 +6,7 @@ public class LastDigitChecker {
     }
 
     public static Boolean hasSameLastDigit(int num1, int num2, int num3){
-        if((num1 >= 10 && num1 <= 100) && (num2 >= 10 && num2 <= 100) && (num3 >= 10 && num3 <= 100)){
+        if((num1 >= 10 && num1 <= 1000) && (num2 >= 10 && num2 <= 1000) && (num3 >= 10 && num3 <= 1000)){
             while(num1 != 0){
                 int lastnum1 = num1 % 10;
                 while(num2 != 0) {
@@ -20,13 +20,11 @@ public class LastDigitChecker {
                             System.out.println("not match");
                             return false;
                         }
-
                     }
                     break;
                 }
                 break;
             }
-
             return true;
         }else{
             System.out.println("One of the numbers is not in the range!");
