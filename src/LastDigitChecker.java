@@ -9,19 +9,16 @@ public class LastDigitChecker {
         if((num1 >= 10 && num1 <= 100) && (num2 >= 10 && num2 <= 100) && (num3 >= 10 && num3 <= 100)){
             while(num1 != 0){
                 int lastnum1 = num1 % 10;
-                System.out.println(lastnum1);
                 while(num2 != 0) {
                     int lastnum2 = num2 % 10;
-                    System.out.println(lastnum2);
                     while (num3 != 0) {
                         int lastnum3 = num3 % 10;
-                        System.out.println(lastnum3);
                         if ((lastnum1 == lastnum2) || (lastnum2 == lastnum3) || (lastnum3 == lastnum1)){
                             System.out.println("match");
                             break;
                         }else{
-                            System.out.println(" not match");
-                            break;
+                            System.out.println("not match");
+                            return false;
                         }
 
                     }
@@ -32,6 +29,7 @@ public class LastDigitChecker {
 
             return true;
         }else{
+            System.out.println("One of the numbers is not in the range!");
             return false;
         }
     }
