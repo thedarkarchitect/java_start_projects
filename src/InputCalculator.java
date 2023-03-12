@@ -34,6 +34,6 @@ public class InputCalculator {
         }
 
         System.out.println("SUM:"+sum+" AVG:"+average);
-        
+
     }
 }
